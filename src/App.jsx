@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import HomePage from './pages/Home'
 import LiquidGlassNavbar from './components/common/Header/Header'
-import AboutMeSection from './components/sections/About/About'
+import Projects from './components/sections/Projects/Projects'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,6 +11,7 @@ function App() {
     <>
       <LiquidGlassNavbar />
       <HomePage />
+      <Projects />
     </>
   )
 }
