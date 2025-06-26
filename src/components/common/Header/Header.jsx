@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const LiquidGlassNavbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +11,6 @@ const LiquidGlassNavbar = () => {
 
     const navItems = [
         { name: "Home", href: "#home", id: "home" },
-        { name: "About", href: "#about", id: "about" },
         { name: "Projects", href: "#projects", id: "projects" },
         { name: "Skills", href: "#skills", id: "skills" },
         { name: "Contact", href: "#contact", id: "contact" }
@@ -35,7 +34,6 @@ const LiquidGlassNavbar = () => {
                     className="relative overflow-hidden rounded-2xl border border-white/20 shadow-2xl"
                     style={{ opacity: navOpacity }}
                 >
-                    {/* Animated background gradient */}
                     <motion.div
                         className="absolute inset-0 bg-gradient-to-r from-white/10 via-blue-50/20 to-purple-50/20"
                         animate={{
@@ -69,7 +67,6 @@ const LiquidGlassNavbar = () => {
                                 </span>
                             </motion.div>
 
-                            {/* Desktop Navigation */}
                             <div className="hidden md:flex items-center space-x-1">
                                 {navItems.map((item) => (
                                     <motion.button
@@ -85,7 +82,6 @@ const LiquidGlassNavbar = () => {
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
                                     >
-                                        {/* Active indicator */}
                                         {activeSection === item.id && (
                                             <motion.div
                                                 layoutId="activeTab"
@@ -94,7 +90,6 @@ const LiquidGlassNavbar = () => {
                                             />
                                         )}
 
-                                        {/* Hover effect */}
                                         <motion.div
                                             className="absolute inset-0 bg-gradient-to-r from-gray-100/30 to-gray-200/30 rounded-xl opacity-0"
                                             whileHover={{ opacity: 1 }}
@@ -106,7 +101,6 @@ const LiquidGlassNavbar = () => {
                                 ))}
                             </div>
 
-                            {/* Mobile menu button */}
                             <motion.button
                                 className="md:hidden p-2 rounded-xl text-gray-600 hover:text-gray-800"
                                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -130,7 +124,6 @@ const LiquidGlassNavbar = () => {
                         </div>
                     </div>
 
-                    {/* Liquid shimmer effect */}
                     <motion.div
                         className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
                         animate={{
@@ -149,7 +142,6 @@ const LiquidGlassNavbar = () => {
                 </motion.div>
             </motion.nav>
 
-            {/* Mobile Menu */}
             <motion.div
                 className={`fixed top-20 left-1/2 transform -translate-x-1/2 z-40 w-full max-w-sm px-4 md:hidden`}
                 initial={{ opacity: 0, y: -20, scale: 0.95 }}
@@ -161,7 +153,6 @@ const LiquidGlassNavbar = () => {
                 style={{ pointerEvents: isMenuOpen ? "auto" : "none" }}
             >
                 <div className="relative overflow-hidden rounded-2xl border border-white/20 shadow-2xl backdrop-blur-xl">
-                    {/* Mobile menu background */}
                     <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-blue-50/80 to-purple-50/90" />
                     <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent" />
 
@@ -192,7 +183,6 @@ const LiquidGlassNavbar = () => {
                 </div>
             </motion.div>
 
-            {/* Backdrop for mobile menu */}
             {isMenuOpen && (
                 <motion.div
                     className="fixed inset-0 bg-black/20 backdrop-blur-sm z-30 md:hidden"
