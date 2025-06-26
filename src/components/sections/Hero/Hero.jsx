@@ -5,7 +5,7 @@ import HeroDescription from "./HeroDescription";
 import AvailabilityBlock from "../../ui/Badge/AvailabilityBlock";
 import FloatingParticles from "../../ui/FloatingParticles";
 import LiquidGlassButton from "../../ui/Button/Button";
-import Modal from "../../ui/Modal";
+import Modal from "../../ui/Modal/Modal";
 import AboutModalPage from "../../../pages/About";
 
 export default function HeroSection() {
