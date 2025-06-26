@@ -6,7 +6,7 @@ import AvailabilityBlock from "../../ui/Badge/AvailabilityBlock";
 import FloatingParticles from "../../ui/FloatingParticles";
 import LiquidGlassButton from "../../ui/Button/Button";
 import Modal from "../../ui/Modal";
-import AboutModalContent from "../About/About";
+import AboutModalPage from "../../../pages/About";
 
 export default function HeroSection() {
     const [darkMode, setDarkMode] = useState(false);
@@ -57,7 +57,7 @@ export default function HeroSection() {
                         title="About Me"
                         darkMode={darkMode}
                     >
-                        <AboutModalContent darkMode={darkMode} onClose={() => setShowModal(false)} />
+                        <AboutModalPage darkMode={darkMode} onClose={() => setShowModal(false)} />
                     </Modal>
                 )
             }
