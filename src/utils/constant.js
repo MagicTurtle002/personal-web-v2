@@ -1,4 +1,9 @@
-export const sections = ["#home", "#projects", "#skills", "#contact"];
+export const navItems = [
+  { name: "Home", href: "#home", id: "home" },
+  { name: "Projects", href: "#projects", id: "projects" },
+  { name: "Skills", href: "#skills", id: "skills" },
+  { name: "Contact", href: "#contact", id: "contact" }
+];
 
 // Social media links
 export const socialLinks = [
